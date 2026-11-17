@@ -631,7 +631,6 @@ summary::after{color:var(--graphite);font-family:var(--f-body);font-weight:400}
         <div class="pc-label">Итого</div>
         <div class="total" id="total"></div>
         <div class="lines" id="lines"></div>
-        <p class="pc-note" id="rate-note"></p>
       </aside>
     </div>
     <div class="calc-cta">
@@ -704,7 +703,7 @@ summary::after{color:var(--graphite);font-family:var(--f-body);font-weight:400}
       <details><summary>Можно ли использовать ролик в рекламе?</summary>
         <p>Да. Готовый ролик ваш: публикуйте его в соцсетях, на сайте и запускайте в таргетированной рекламе.</p></details>
       <details><summary>Как оплатить?</summary>
-        <p>В белорусских рублях, долларах или российских рублях. Валюту и способ оплаты обсуждаем при заказе, пересчёт по курсу из калькулятора.</p><p><b>Работаю в белую:</b> я оформлена как самозанятая в Беларуси и после каждой оплаты присылаю чек. Для организации могу выставить счёт.</p></details>
+        <p>В белорусских рублях, долларах или российских рублях. Валюту и способ оплаты обсуждаем при заказе.</p><p><b>Работаю в белую:</b> я оформлена как самозанятая в Беларуси и после каждой оплаты присылаю чек. Для организации могу выставить счёт.</p></details>
       <details><summary>С какими проектами вы не работаете?</summary>
         <p>Не беру казино, ставки, финансовые пирамиды и другие сомнительные схемы.</p></details>
     </div>
@@ -730,7 +729,7 @@ summary::after{color:var(--graphite);font-family:var(--f-body);font-weight:400}
   <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
   <button type="button" class="lb-btn lb-next" id="lb-next" aria-label="Следующий скрин">›</button>
 </div>
-<footer class="band foot"><div class="in"><span>Наталья Зингер · ИИ-видео для брендов · Минск</span><span>Итоговая цена фиксируется после брифа</span></div></footer>
+<footer class="band foot"><div class="in"><span>Наталья Зингер · ИИ-видео для брендов · Минск</span><span>Конечная стоимость формируется после брифа, калькулятор — лишь ориентир.</span></div></footer>
 
 <script>
 (function(){
@@ -785,7 +784,6 @@ summary::after{color:var(--graphite);font-family:var(--f-body);font-weight:400}
     $('q-out').textContent=st.q; $('r-out').textContent=st.r;
     $('q-hint').textContent=plural(st.q,'ролик','ролика','роликов')+' по '+st.d+' сек';
     $('r-price').textContent=show(p.regen,c);
-    $('rate-note').textContent=st.cur==='BYN'?'Оплата в BYN. Можно также в USD или RUB.':(st.cur==='RUB'?'Пересчёт по курсу: 100 ₽ = 3,70 BYN.':'Пересчёт по курсу: $1 = 3,00 BYN.');
     document.querySelectorAll('#cur-tabs button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.cur===st.cur))});
     document.querySelectorAll('.cur-tabs[data-key]').forEach(function(g){g.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',String(+b.dataset.v===st[g.dataset.key]))})});
   }
